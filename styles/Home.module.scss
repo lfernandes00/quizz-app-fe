@@ -1,0 +1,8 @@
+@import "~scss";
+
+.wrapper {
+  @extend .containerWidth;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
