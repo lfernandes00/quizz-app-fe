@@ -1,0 +1,83 @@
+@import "~scss";
+
+/* HTML TAGS */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+  background-color: $color-bg;
+  overflow-x: hidden;
+}
+
+h1 {
+  line-height: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 45px;
+
+  @include respond(mobile) {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 54px;
+
+  @include respond(mobile) {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 34px;
+
+  @include respond(mobile) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+}
