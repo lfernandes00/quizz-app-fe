@@ -1,1 +1,15 @@
 @import "./mixins";
+
+.containerWidth {
+  max-width: 1440px;
+  padding: 50px 130px;
+  margin: 120px auto 0 auto;
+
+  @include respond(lg) {
+    padding: 50px 48px;
+  }
+
+  @include respond(mobile) {
+    padding: 50px 24px;
+  }
+}
