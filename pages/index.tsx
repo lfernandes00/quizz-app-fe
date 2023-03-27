@@ -1,3 +1,6 @@
+import { posts } from "constants/home";
+import CardPost from "components/Card/CardPost";
+
 import styles from "styles/Home.module.scss";
 
 export default function Home() {
@@ -6,7 +9,11 @@ export default function Home() {
   }
 
   function Feed() {
-    return <div className={styles.feedWrapper}>Feed</div>;
+    return (
+      <div className={styles.feedWrapper}>
+        {posts && posts.map(({ id, ...rest }) => <CardPost key={id} {...rest} />)}
+      </div>
+    );
   }
 
   function Activities() {
