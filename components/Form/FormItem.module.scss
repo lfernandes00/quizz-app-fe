@@ -1,0 +1,33 @@
+@import "~scss";
+
+.formItem {
+  :global(.ant-form-item) {
+    :global(.ant-form-item-control) {
+      input,
+      textarea,
+      :global(.ant-input-password) {
+        background-color: transparent;
+        border: 1px solid $color-grey;
+        border-radius: 4px;
+        padding: 7px 20px;
+        color: white;
+
+        &::placeholder {
+          color: #9b9b9b;
+        }
+
+        &:focus {
+          border-color: $color-primary;
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+          transition: color, background-color;
+          -webkit-transition-delay: 9999s;
+        }
+      }
+    }
+  }
+}
