@@ -11,6 +11,29 @@
 
   .feedWrapper {
     max-width: 750px;
+
+    .newComment {
+      .cardWrapper {
+        background-color: $color-primary;
+        color: white;
+        margin-bottom: 20px;
+        border: none;
+        box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+
+        :global(.ant-card-body) {
+          .avatarWrapper {
+            position: relative;
+            height: 35px !important;
+            width: 35px !important;
+
+            img {
+              border-radius: 50px;
+            }
+          }
+        }
+      }
+    }
   }
 
   .activitiesWrapper {

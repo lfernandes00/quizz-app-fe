@@ -1,3 +1,6 @@
+import { Card } from "antd";
+import Image from "next/image";
+
 import { posts } from "constants/home";
 import CardPost from "components/Card/CardPost";
 
@@ -11,6 +14,13 @@ export default function Home() {
   function Feed() {
     return (
       <div className={styles.feedWrapper}>
+        <div className={styles.newComment}>
+          <Card className={styles.cardWrapper}>
+            <div className={styles.avatarWrapper}>
+              <Image fill src={"/avatar.png"} alt={`avatar`} />
+            </div>
+          </Card>
+        </div>
         {posts && posts.map(({ id, ...rest }) => <CardPost key={id} {...rest} />)}
       </div>
     );
