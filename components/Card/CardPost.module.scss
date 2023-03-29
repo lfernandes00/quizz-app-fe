@@ -1,8 +1,11 @@
 @import "~scss";
 
 .cardWrapper {
-  background-color: white;
+  background-color: $color-primary;
+  color: white;
+  margin-bottom: 20px;
   padding: 25px 30px;
+  border: none;
   box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 
@@ -13,6 +16,65 @@
       .header {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 15px;
+
+        .userInfo {
+          display: flex;
+          gap: 5px;
+
+          .avatarWrapper {
+            position: relative;
+            height: 45px !important;
+            width: 45px !important;
+
+            img {
+              border-radius: 50px;
+            }
+          }
+
+          h6 {
+            margin-bottom: 5px;
+            font-weight: 400;
+            line-height: 15px;
+            color: #adadad;
+          }
+
+          h5 {
+            font-weight: 600;
+          }
+        }
+      }
+
+      .description {
+        margin-bottom: 15px;
+        h6 {
+          font-weight: 600;
+          text-align: justify;
+        }
+      }
+
+      .interactions {
+        svg {
+          width: 16px;
+          height: 16px;
+          &:first-of-type {
+            margin-right: 10px;
+          }
+        }
+
+        .comment {
+          border-top: 0.5px solid #adadad;
+          padding: 20px 0 0 0;
+          .avatarWrapper {
+            position: relative;
+            height: 35px !important;
+            width: 35px !important;
+
+            img {
+              border-radius: 50px;
+            }
+          }
+        }
       }
     }
   }
