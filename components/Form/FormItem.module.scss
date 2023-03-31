@@ -6,9 +6,9 @@
       input,
       textarea,
       :global(.ant-input-password) {
-        background-color: transparent;
-        border: 1px solid grey;
-        border-radius: 4px;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 8px;
         padding: 7px 20px;
         color: white;
 
