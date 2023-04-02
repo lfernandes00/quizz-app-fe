@@ -33,28 +33,6 @@
             border-radius: 50px;
           }
         }
-
-        .form {
-          flex-grow: 1;
-
-          :global(.ant-form-item) {
-            &:not(:first-of-type) {
-              margin-bottom: 0px;
-            }
-
-            .btn {
-              float: right;
-              width: 80px;
-              border: none;
-              background-color: grey;
-              color: white;
-
-              &:focus {
-                outline: none;
-              }
-            }
-          }
-        }
       }
     }
   }
