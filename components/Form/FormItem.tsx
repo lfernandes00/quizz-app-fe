@@ -65,7 +65,8 @@ export default function FormItem(props: IProps) {
             }
           ]}>
           <Input.TextArea
-            autoSize={{ minRows: 5 }}
+            autoSize={{ minRows: 1, maxRows: 3 }}
+            maxLength={350}
             placeholder={placeholder}
             className={styles.input}
             onChange={onChange}
