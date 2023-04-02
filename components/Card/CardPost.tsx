@@ -1,14 +1,13 @@
 import Image from "next/image";
-import { useCallback } from "react";
-import { Form, Button } from "antd";
 import { useForm } from "antd/lib/form/Form";
+import { useCallback } from "react";
 import { Card } from "antd";
 import { FiMoreVertical } from "react-icons/fi";
-import { MdOutlineFavoriteBorder, MdOutlineFavorite } from "react-icons/md";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { FaRegComment } from "react-icons/fa";
 
-import FormItem from "components/Form/FormItem";
 import { IContentCards } from "common.types";
+import FormFeed from "components/Form/FormFeed";
 
 import styles from "./CardPost.module.scss";
 
@@ -63,20 +62,11 @@ export default function CardPost({
             <div className={styles.avatarWrapper}>
               <Image fill src={avatar ? avatar : "/avatar.png"} alt={`${username}_avatar`} />
             </div>
-            <Form className={styles.form} form={form} onFinish={onFinish}>
-              <FormItem
-                name="post"
-                placeholder="What's going through your mind..."
-                message="Post is required!"
-                required
-              />
-
-              {/* <Form.Item>
-                <Button className={styles.btn} htmlType="submit">
-                  Send
-                </Button>
-              </Form.Item> */}
-            </Form>
+            <FormFeed
+              name="comment"
+              placeholder="What's going through your mind..."
+              message="Comment is required!"
+            />
           </div>
         </div>
       </div>

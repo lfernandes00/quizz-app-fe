@@ -1,0 +1,33 @@
+@import "~scss";
+
+.form {
+  position: relative;
+  flex-grow: 1;
+
+  :global(.ant-form-item) {
+    margin-bottom: 0px;
+
+    textarea {
+      padding-right: 40px !important;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    background-color: transparent;
+    height: fit-content;
+    color: white;
+    bottom: 4px;
+    right: 15px;
+    padding: 0;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    svg {
+      margin: 0;
+    }
+  }
+}
