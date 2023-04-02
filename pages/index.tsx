@@ -1,12 +1,10 @@
-import { Button, Card } from "antd";
 import { useCallback } from "react";
 import { useForm } from "antd/lib/form/Form";
 import Image from "next/image";
-import { Form } from "antd";
 
 import { posts } from "constants/home";
-import FormItem from "components/Form/FormItem";
 import CardPost from "components/Card/CardPost";
+import FormFeed from "components/Form/FormFeed";
 
 import styles from "styles/Home.module.scss";
 
@@ -32,20 +30,11 @@ export default function Home() {
             <div className={styles.avatarWrapper}>
               <Image fill src={"/avatar.png"} alt={`avatar`} />
             </div>
-            <Form className={styles.form} form={form} onFinish={onFinish}>
-              <FormItem
-                name="post"
-                placeholder="What's going through your mind..."
-                message="Post is required!"
-                required
-              />
-
-              <Form.Item>
-                <Button className={styles.btn} htmlType="submit">
-                  Send
-                </Button>
-              </Form.Item>
-            </Form>
+            <FormFeed
+              name="post"
+              placeholder="What's going through your mind..."
+              message="Post is required!"
+            />
           </div>
         </div>
         {posts && posts.map(({ id, ...rest }) => <CardPost key={id} {...rest} />)}
