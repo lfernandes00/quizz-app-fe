@@ -5,7 +5,8 @@
   color: white;
   margin-bottom: 20px;
   padding: 25px 30px;
-  border: none;
+  // border: none;
+  border: 1px solid #444c56;
   box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 
@@ -36,10 +37,11 @@
             margin-bottom: 5px;
             font-weight: 400;
             line-height: 15px;
-            color: #adadad;
+            color: $color-text;
           }
 
           h5 {
+            color: $color-title;
             font-weight: 600;
           }
         }
@@ -49,7 +51,7 @@
             padding: 0;
             background: transparent;
             border: none;
-            color: white;
+            color: $color-title;
             cursor: pointer;
           }
         }
@@ -59,6 +61,7 @@
         margin-bottom: 15px;
 
         h6 {
+          color: $color-text;
           margin-bottom: 15px;
           font-weight: 400;
           text-align: justify;
@@ -81,6 +84,7 @@
 
       .interactions {
         svg {
+          color: $color-title;
           width: 16px;
           height: 16px;
           &:first-of-type {
@@ -91,7 +95,7 @@
         .comment {
           display: flex;
           gap: 20px;
-          border-top: 0.5px solid #adadad;
+          border-top: 0.5px solid $color-text;
           padding: 20px 0 0 0;
 
           .avatarWrapper {
